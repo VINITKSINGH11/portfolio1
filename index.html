@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinit Singh | AI/ML Portfolio</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#0f172a;
+      color:#e5e7eb;
+      scroll-behavior:smooth;
+    }
+
+    /* ================= NAVBAR ================= */
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      height:64px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 10%;
+      background:#020617;
+      border-bottom:1px solid #1e293b;
+      z-index:1000;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+    }
+
+    nav a{
+      margin:0 14px;
+      text-decoration:none;
+      color:#e5e7eb;
+      font-size:0.95rem;
+      font-weight:500;
+      transition:color 0.25s;
+    }
+
+    nav a:hover{
+      color:#38bdf8;
+    }
+
+    .resume-btn{
+      border:1.5px solid #38bdf8;
+      padding:6px 16px;
+      border-radius:999px;
+      transition:0.25s;
+    }
+
+    .resume-btn:hover{
+      background:#38bdf8;
+      color:#020617;
+    }
+
+    /* ================= HERO ================= */
+    header{
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    header h1{
+      font-size:3.2rem;
+    }
+
+    header span{
+      color:#38bdf8;
+    }
+
+    .typing{
+      margin-top:10px;
+      font-size:1.3rem;
+      border-right:3px solid #38bdf8;
+      width:22ch;
+      white-space:nowrap;
+      overflow:hidden;
+      animation:typing 4s steps(22) infinite, blink 0.6s step-end infinite;
+    }
+
+    @keyframes typing{
+      0%{width:0}
+      50%{width:22ch}
+      100%{width:0}
+    }
+
+    @keyframes blink{
+      50%{border-color:transparent}
+    }
+
+    section{
+      padding:100px 10%;
+    }
+
+    h2{
+      text-align:center;
+      color:#38bdf8;
+      margin-bottom:40px;
+    }
+
+    /* ================= ABOUT ================= */
+    .about{
+      max-width:800px;
+      margin:auto;
+      text-align:center;
+      line-height:1.8;
+    }
+
+    /* ================= SKILLS ================= */
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+    }
+
+    .skill-card{
+      background:#020617;
+      padding:20px;
+      border-radius:15px;
+      transition:0.4s;
+    }
+
+    .skill-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 0 20px #38bdf8;
+    }
+
+    .bar{
+      height:8px;
+      background:#1e293b;
+      border-radius:10px;
+      overflow:hidden;
+      margin-top:10px;
+    }
+
+    .fill{
+      height:100%;
+      background:#38bdf8;
+      animation:fillBar 2s ease;
+    }
+
+    @keyframes fillBar{
+      from{width:0}
+    }
+
+    /* ================= PROJECTS ================= */
+    .projects-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .project{
+      background:#020617;
+      padding:25px;
+      border-radius:15px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .project::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(56,189,248,0.3),
+        transparent
+      );
+      transform:translateX(-100%);
+    }
+
+    .project:hover::before{
+      transform:translateX(100%);
+      transition:0.7s;
+    }
+
+    /* ================= CONTACT ================= */
+    .contact{
+      text-align:center;
+    }
+
+    .contact a{
+      display:inline-block;
+      margin:10px;
+      padding:12px 25px;
+      border:2px solid #38bdf8;
+      color:#38bdf8;
+      border-radius:30px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .contact a:hover{
+      background:#38bdf8;
+      color:#020617;
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#020617;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <a href="https://drive.google.com/file/d/1hPZc5ZyA_fFievD80OW5HAGv0oD5Mcus/view?usp=sharing" target="_blank" class="resume-btn">Resume</a>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header id="home">
+  <div>
+    <h1>Hi, I'm <span>VINIT KRISHNA SINGH</span></h1>
+    <div class="typing">AI & ML Enthusiast</div>
+  </div>
+</header>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <h2>About Me</h2>
+  <div class="about">
+    I am a Computer Science graduating  specializing in Artificial Intelligence and Machine Learning.
+     Strong foundation in Python, data analysis, and machine learning algorithms with hands-on academic projects. 
+     Seeking an entry-level role to apply analytical skills and contribute to real-world AI/ML solutions.
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">Python
+      <div class="bar"><div class="fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill-card">Machine Learning
+      <div class="bar"><div class="fill" style="width:80%"></div></div>
+    </div>
+    <div class="skill-card">Data Analysis
+      <div class="bar"><div class="fill" style="width:75%"></div></div>
+    </div>
+    <div class="skill-card">Basic SQL
+      <div class="bar"><div class="fill" style="width:70%"></div></div>
+    </div>
+    <div class="skill-card">Data Concepts
+      <div class="bar"><div class="fill" style="width:70%"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project">Student Performance Prediction (ML)</div>
+    <div class="project">Travelling Salesman Problem</div>
+    <div class="project">HOME AUTOMATION SYSTEM</div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact">
+    <a href="mailto:vinitsinghvs011@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/vinit-krishna-singh-6643b638a" target="_blank">LinkedIn</a>
+    <a href="#">GitHub</a>
+  </div>
+</section>
+
+<footer>
+ Vinit Singh | AI/ML Portfolio
+</footer>
+
+</body>
+</html>
